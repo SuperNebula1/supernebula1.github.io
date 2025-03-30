@@ -583,7 +583,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+    width: 500px;
 }
 
 .contact-container form input, .contact-container form textarea {

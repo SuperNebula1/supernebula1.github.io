@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
     button.classList.add('dark');
     sun.classList.add('dark');
     moon.classList.add('dark');
-    heroImg.src = pathDark;
+    if (heroImg !== null) {
+      heroImg.src = pathDark;
+    }
+    
     
   } 
   else {
@@ -36,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
       r.style.setProperty('--colour-btn2-text', rs.getPropertyValue('--colour-light-btn2-text'));
       r.style.setProperty('--colour-card-border', rs.getPropertyValue('--colour-card-light-border'));
       button.classList.add('light');
-      heroImg.src = pathLight;
+      if(heroImg !== null) {
+        heroImg.src = pathLight;
+      }
+      
 
   }
 
@@ -71,7 +77,9 @@ function colourToggle() {
     button.classList.replace('dark','light');
     sun.classList.remove('dark');
     moon.classList.remove('dark');
-    heroImg.src = pathLight;
+    if(heroImg !== null) {
+      heroImg.src = pathLight;
+    }
 
     return;
   } else if(theme === 'light') {
@@ -90,7 +98,9 @@ function colourToggle() {
     button.classList.replace('light','dark');
     sun.classList.add('dark');
     moon.classList.add('dark');
-    heroImg.src = pathDark;
+    if(heroImg !== null) {
+      heroImg.src = pathDark;
+    }
     
     return;
   }
