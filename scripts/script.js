@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
       heroImg.src = pathLight;
 
   }
+
+  button.addEventListener('click', function() {
+    colourToggle();
+  });
   
 
 });
