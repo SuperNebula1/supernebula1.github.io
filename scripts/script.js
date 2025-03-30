@@ -2,8 +2,8 @@ var theme = localStorage.getItem('theme');
 var r = document.querySelector(':root');
 var rs = getComputedStyle(r);
 
-var pathLight = "images/hero-dark.svg";
-var pathDark = "images/hero-light.svg";
+var pathLight = "./images/hero-dark.svg";
+var pathDark = "./images/hero-light.svg";
 
 
 document.addEventListener('DOMContentLoaded', function() {
