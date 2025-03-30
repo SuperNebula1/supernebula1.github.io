@@ -88,7 +88,7 @@ function colourToggle() {
     }
 
     return;
-  } else if(theme === 'light') {
+  } else if(theme === 'light' || theme === null) {
 
 
     localStorage.setItem('theme', 'dark');
