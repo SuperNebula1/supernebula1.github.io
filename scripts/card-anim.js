@@ -9,9 +9,9 @@ document.querySelectorAll('.project').forEach(card => {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
   
-      const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI) + 180;
+      const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI) + 90;
   
-      const spread = 280; // degrees
+      const spread = 260; // degrees
       const grad = [];
   
       for (let i = 0; i <= 360; i++) {

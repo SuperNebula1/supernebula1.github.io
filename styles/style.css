@@ -58,11 +58,20 @@ h2 {
     margin: 10px 0;
 }
 
-
-
-p, a, li {
-    color: var(--colour-text);
+h5 {
+    font-size: 0.9rem;
+    margin-top: 80px;
 }
+
+
+
+p, a, li{
+    color: var(--colour-text);
+    
+
+}
+
+
 
 
 
@@ -114,7 +123,6 @@ nav {
     display: flex;
     margin-right: auto;
     border-bottom: 2px solid grey;
-    
     padding: 10px 20px;
 }
 
@@ -129,10 +137,12 @@ nav li {
     margin: 0 20px;
 }
 
-nav a {
+nav a, nav i{
     color: var(--colour-text);
     text-decoration: none;
+    transition: all 0.5s ease;
 }
+
 
 nav a:hover {
     color: var(--colour-btn1-bg);
@@ -156,6 +166,7 @@ nav a:hover {
     font-family: 'Birthstone', cursive;
     color: var(--colour-text);
     margin: 0 auto 0 0;
+    transition: all 0.5s ease;
 }
 
 .dropdown {
@@ -163,27 +174,31 @@ nav a:hover {
     display: inline-block;
     min-width: 130px;
     padding: 10px 10px;
+    transition: all 0.5s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .dropdown:hover {
     color: var(--colour-btn1-bg);
     background-color: var(--colour-bg2);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
     
-    transition: all 0.5s ease;
+    
 }
 
 .dropdown:hover .dropdown-content {
     opacity: 1;
+    visibility: visible;
     color: var(--colour-btn1-bg);
     transition: all 0.5s ease;
     
 }
 .dropdown-content {
     opacity: 0;
-    position: absolute;
+    visibility: hidden;
     display: flex;
+    position: absolute;
     flex-direction: column;
     left: 50%; 
     transform: translateX(-50%);
@@ -193,7 +208,8 @@ nav a:hover {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1;
-    padding-top: 10px;
+    margin-top: 10px;
+    transition: all 0.5s ease;
 }
 .dropdown-content a {
     color: var(--colour-text);
@@ -284,14 +300,14 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    container: 100%;
-    height: 100vh;
+    min-height: 100vh;
     
 }
 
 .hero p {
     color: var(--colour-text);
     text-align: left;
+    
 }
 
 .left {
@@ -568,14 +584,29 @@ footer {
 /* Contact Page*/
 
 
-#contact {
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
+.contact {
+    padding: 100px 0;
     background-color: var(--colour-bg2);
-    text-align: center;
-    align-items: center;
+    display: flex;
 }
+
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info i {
+    color: var(--colour-text);
+}
+
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0px 20px 0px;
+}
+
 
 
 
@@ -583,7 +614,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 500px;
+    
 }
 
 .contact-container form input, .contact-container form textarea {
@@ -593,6 +624,8 @@ footer {
     background-color: #f4f4f4;
     color: black;
     font-size: 1rem;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .contact-container form input:focus, .contact-container form textarea:focus {
@@ -645,6 +678,18 @@ footer {
 
 /*Tablet*/
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 5.3vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+    
     .hero {
         flex-direction: column;
         justify-items: center;
@@ -653,6 +698,18 @@ footer {
         width: 80%;
         
     }
+
+
+    .contact {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
     
 }
 
