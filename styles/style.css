@@ -490,7 +490,7 @@ nav a:hover {
     background-color: var(--colour-bg2);
     border-radius: 25px;
     padding: 40px;
-    margin-top: 20px;
+    margin: 20px 20px;
     box-shadow: var(--colour-card-border) 0 2px 5px;
 }
 
@@ -576,7 +576,7 @@ footer {
 .social-container i {
     font-size: 2rem;
     color: var(--colour-text);
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
     
 }
 
@@ -686,6 +686,10 @@ footer {
         font-size: 4vw;
     }
 
+    a{
+        font-size: 2vw;
+    }
+
     p {
         font-size: 2vw;
     }
@@ -710,12 +714,28 @@ footer {
         display: none;
     }
 
+    .social-container i {
+        font-size: 4vw;
+    }
+
     
 }
 
 /*Mobile*/
 @media screen and (max-width: 480px) {
-    
+
+    #footerMenuItems {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .social-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
