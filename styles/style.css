@@ -668,7 +668,10 @@ footer {
 
 #about .right {
     width: 60%;
-    padding: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     
 }
 
@@ -684,6 +687,11 @@ footer {
     object-position: bottom;
     
 }
+
+#about p {
+    font-size: max(1.4vw, 0.8rem);
+}
+
 
 /*Animation*/
 @keyframes slide {
@@ -768,6 +776,11 @@ footer {
         align-self: center;
     }
 
+    #about {
+        min-height: 100vh;
+    }
+
+    
     #about img {
         width: 70%;
         height: 100%;
@@ -807,11 +820,32 @@ footer {
         
     }
 
+    #about {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+
     #about img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: bottom;
+    }
+
+    #about .left {
+        width: 80%;
+        max-width: 100%;
+        margin: 30px 0 ;
+        text-align: center;
+    }
+
+    #about .right {
+        width: 80%;
+        max-width: 100%;
+        margin: 30px 0 ;
+        text-align: center;
     }
     
   
