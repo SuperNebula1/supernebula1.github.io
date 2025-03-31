@@ -59,13 +59,15 @@ h5 {
     margin-top: 80px;
 }
 
-p {
-    font-size: 1.4rem;
+p, a {
+    font-size: 1.2rem;
 }
 
 p, a, li{
     color: var(--colour-text);
 }
+
+
 
 .primary-btn {
     position: relative;
@@ -170,6 +172,7 @@ nav a:hover {
     transition: all 0.5s ease;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    font-size: 1.2rem;
 }
 
 .dropdown:hover {
@@ -538,7 +541,7 @@ footer {
 }
 
 .footer-logo h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 10px 0;
     font-family: 'Birthstone', cursive;
@@ -589,6 +592,7 @@ footer {
 
 .contact-info {
     text-align: left;
+    margin-bottom: 40px;
 }
 
 .contact-info i {
