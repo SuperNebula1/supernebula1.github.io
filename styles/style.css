@@ -674,7 +674,7 @@ footer {
 /*Tablet*/
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: max(5vw, 1rem);
+        font-size: max(5vw, 1.2rem);
     }
 
     h2 {
@@ -686,7 +686,7 @@ footer {
     }
 
     p {
-        font-size: max(3vw, 0.8rem);
+        font-size: max(3vw, 1rem);
     }
     
     .hero {
