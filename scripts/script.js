@@ -45,14 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
 
   }
-  console.log("Theme script loaded");
-  console.log("Theme in storage:", localStorage.getItem('theme'));
 
 
   button.addEventListener('click', function() {
-    console.log("Button clicked");
     colourToggle();
-    console.log("Theme after click:", localStorage.getItem('theme'));
 
   });
   
