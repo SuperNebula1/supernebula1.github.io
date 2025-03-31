@@ -60,7 +60,7 @@ h5 {
 }
 
 p, a {
-    font-size: 1.2rem;
+    font-size: 1.4vw;
 }
 
 p, a, li{
@@ -172,7 +172,7 @@ nav a:hover {
     transition: all 0.5s ease;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1.4vw;
 }
 
 .dropdown:hover {
@@ -649,6 +649,30 @@ footer {
     transition: background-color 0.5s ease;
 }
 
+/*About Page*/
+#about {
+    padding: 0;
+    background-color: var(--colour-bg1);
+    text-align: center;
+}
+
+#about .left {
+    display: flex;
+    width: 50%;
+    padding: 0;
+    justify-items: left;
+    
+}
+
+#about img {
+    width: 70%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: bottom;
+    
+    
+}
+
 /*Animation*/
 @keyframes slide {
     from {
@@ -675,7 +699,6 @@ footer {
     -webkit-mask-composite: destination-out;
   }
 
-
 /*Tablet*/
 @media screen and (max-width: 768px) {
     h1 {
@@ -686,13 +709,7 @@ footer {
         font-size: max(4vw, 1.2rem);
     }
 
-    a{
-        font-size: max(3vw, 1rem);
-    }
-
-    p {
-        font-size: max(3vw, 1rem);
-    }
+    
     
     .hero {
         flex-direction: column;
@@ -710,12 +727,26 @@ footer {
         align-items: center;
     }
 
-    .menu {
-        display: none;
+    .nav li {
+        margin: 0 10px;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu a {
+        font-size: max(1vw, 0.6rem);
+    }
+
+    .dropdown {
+        font-size: max(1vw, 0.6rem);
     }
 
     .social-container i {
         font-size: 4vw;
+        margin-left: 20px;
         
     }
 
@@ -724,12 +755,25 @@ footer {
         justify-self: center;
         align-self: center;
     }
+
+    #about img {
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
     
 }
 
 /*Mobile*/
 @media screen and (max-width: 425px) {
+    a{
+        font-size: max(3vw, 1rem);
+    }
 
+    p {
+        font-size: max(3vw, 1rem);
+    }
 
     #footerMenuItems {
         flex-direction: column;
@@ -749,6 +793,13 @@ footer {
         justify-content: center;
         align-items: center;
         
+    }
+
+    #about img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
     }
     
   
