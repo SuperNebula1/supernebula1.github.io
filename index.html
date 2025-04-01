@@ -201,23 +201,23 @@
         <section id="projects-section">
             <p>Projects</p>
             <h2>My Recent Projects</h2>
-            <div class="project-container">
-                <div class="project" onclick="location.href='projects.html';">
-                    <div class="glow-border" id="glow"></div>
-                    <img src="images/projects/RedemptionRoleplay.png" alt="Project 1"/>
+            <div class="project-container" id="projectContainer">
+                <div class="project" id="project1">
+                    <div class="glow-border" ></div>
+                    <img id="project1-img" src="images/projects/RedemptionRoleplay.png" alt="Project 1"/>
                     <div class="project-info">
-                        <h3>Redemption Valley Roleplay</h3>
-                        <p>A responsive, western-themed website for a RedM roleplay server. Includes custom branding, server details, and smooth navigation for rules, FAQ, and applications.</p>
-                        <div class="secondary-btn">View Project</div>
+                        <h3 id="project1-title">Redemption Valley Roleplay</h3>
+                        <p id="project1-desc">A responsive, western-themed website for a RedM roleplay server. Includes custom branding, server details, and smooth navigation for rules, FAQ, and applications.</p>
+                        <div id="project1-btn" class="secondary-btn">View Project</div>
                     </div>
                 </div>
-                    <div class="project" onclick="location.href='projects.html';">
-                        <div class="glow-border" id="glow"></div>
-                        <img src="images/projects/Frontline.png" alt="Project 2"/>
+                    <div class="project" id="project2">
+                        <div class="glow-border" ></div>
+                        <img id="project2-img" src="images/projects/Frontline.png" alt="Project 2"/>
                         <div class="project-info">
-                            <h3>Frontline: Last Stand</h3>
-                            <p>Fun little 2d war based, shooter survival game!</p>
-                            <div class="secondary-btn">View Project</div>
+                            <h3 id="project2-title">Frontline: Last Stand</h3>
+                            <p id="project2-desc">Fun little 2d war based, shooter survival game!</p>
+                            <div id="project2-btn" class="secondary-btn">View Project</div>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,6 @@
                 <a href="contact.html" class="primary-btn">Contact Me</a>
             </div>
 
-            <script src="scripts/card-anim.js"></script>
         </section>
         <footer>
             <div class="footer-content">
@@ -262,5 +261,39 @@
                     <p>© 2025 Tanner Adolphe. All rights reserved.</p>
             </div>
         </footer>
+        
+        <script>
+            fetch("http://65.49.60.21:1337/api/projects?sort=createdAt:desc&pagination[limit]=2&populate=*")
+            .then(res => res.json())
+            .then(data => {
+              const entries = data.data;
+          
+              entries.forEach((project, index) => {
+                const cardIndex = index + 1;
+          
+                if (!project || !project.Image || !project.Image.url) {
+                  console.warn(`Skipping project at index ${index}: Missing required data`);
+                  return;
+                }
+          
+                const { Title, Description, Image, id } = project;
+                const imageUrl = "http://65.49.60.21:1337" + Image.url;
+          
+                document.getElementById(`project${cardIndex}-title`).textContent = Title;
+                document.getElementById(`project${cardIndex}-desc`).textContent = Description;
+                document.getElementById(`project${cardIndex}-img`).alt = Title;
+                document.getElementById(`project${cardIndex}-img`).src = imageUrl;
+                document.getElementById(`project${cardIndex}-btn`).onclick = () => {
+                  window.location.href = `projects.html?id=${id}`;
+                };
+              });
+            })
+            .catch(err => {
+              console.error("Failed to load projects:", err);
+            });                 
+            </script>
+            <script src="scripts/card-anim.js"></script>
+            
+
     </body>
 </html>
