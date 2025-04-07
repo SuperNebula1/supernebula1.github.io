@@ -20,7 +20,7 @@ fetch("https://api.supernebula.dev/api/projects?sort=createdAt:desc&pagination[l
             document.getElementById(`project${cardIndex}-img`).alt = Title;
             document.getElementById(`project${cardIndex}-img`).src = imageUrl;
             document.getElementById(`project${cardIndex}-btn`).onclick = () => {
-              window.location.href = `projects.html?id=${id}`;
+              window.location.href = `projects.html`;
             };
         });
     })
